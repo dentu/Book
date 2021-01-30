@@ -1,0 +1,184 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+a {
+	text-decoration:none;
+}
+.head {
+    width: 100%;
+    /* border: 1px solid black; */
+    position: relative;
+}
+
+.head>img {
+    width: 180px;
+}
+
+.head>ul>li {
+    float: right;
+    list-style-type: none;
+    padding: 0 5px;
+}
+
+.head>ul {
+    position: absolute;
+    right: 0px;
+    top: 30px;
+}
+
+.head>ul>li:hover{
+	cursor:pointer;
+	color:#B4D76D;
+}
+
+.shopping {
+    width: 100%;
+    height: 70px;
+    background: black;
+    line-height: 59px;
+    text-align: center;
+    color: #B4D76D;
+    border-top: 6px solid #B4D76D;
+}
+
+.search {
+    width: 100%;
+    height: 50px;
+    background: #F59F1D;
+    position: relative;
+}
+
+.search>.search_position {
+    position: absolute;
+    top: 13px;
+    right: 20%;
+}
+
+.show_book {
+    /* width: 45%; */
+    width: 855px;
+    height: 600px;
+    background: #FCFDEF;
+    margin: auto;
+    border: 1px solid black;
+    border-top: none;
+}
+
+.book_addr {
+    width: 102%;
+    height: 30px;
+    background: white;
+    text-align: right;
+    padding-top: 9px;
+    padding-right: 17px;
+    font-size: small;
+    margin-left: -1px;
+}
+
+.book_border {
+    width: 100%;
+    height: 100%;
+    border-top: 1px solid black;
+}
+
+.book_list {
+    width: 95%;
+    height: 95%;
+    margin: auto;
+    padding-top: 25px;
+    /* background: black; */
+}
+
+.book_list>.border {
+    width: 100%;
+    height: 4px;
+    background: black;
+}
+
+.book_total {
+    margin-top: 20px;
+}
+
+.book_total>h4 {
+    display: inline-block;
+}
+
+.book_total>span {
+    display: inline-block;
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+.book_list>.img {
+    width: 100%;
+    margin-top: 40px;
+}
+
+.all_book {
+    width: 100%;
+    padding-left: 70px;
+    padding-top: 20px;
+    font-size: 13px;
+}
+
+.all_book>div {
+    display: inline-block;
+    width: 145px;
+    height: 195px;
+    background: black;
+    margin: 0px 10px;
+    box-shadow: 9px 6px 11px #000;
+    vertical-align:middle;
+}
+
+.all_book>div>img {
+    width: 100%;
+    height: 100%;
+}
+.all_book>div:hover{
+	cursor:pointer;
+}
+
+.all_book>a {
+    padding-top: 5px;
+}
+
+.fanye {
+    margin-top: 13%;
+    text-align: center;
+}
+
+.fanye>img {
+    margin-top: -20px;
+}
+
+.fanye>div {
+    display: inline-block;
+}
+
+.list_color {
+    padding: 5px 17px;
+    margin: 1px 0;
+    border: 1px solid blue;
+    color: blue;
+}
+
+.fanye>.ls>span:hover {
+    background: blue;
+    color: white;
+    cursor:pointer;
+}
+
+.fanye>img:hover{
+	cursor:pointer;
+}
+
+.chenge_coloe {
+	padding: 5px 17px;
+    margin: 1px 0;
+    border: 1px solid blue;
+	background: blue;
+    color: white;
+}

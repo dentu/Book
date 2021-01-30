@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/porduct_list.css">
+    
+</head>
+
+<body>
+    <div class="head">
+        <img src="images/logo_2.jpg" alt="">
+        <ul>
+            <li>|</li>
+            <li>帮助中心</li>
+            <li>|</li>
+            <li>用户登录</li>
+            <li>|</li>
+            <li>用户注册</li>
+        </ul>
+    </div>
+     <!-- 清除浮动 -->
+   	<!-- <br class="clear" />  -->
+    <div class="shopping">商品目录</div>
+    <!-- 搜索 -->
+    <div class="search">
+        <div class="search_position">
+            Search:<input type="text" name="" id="">
+        </div>
+    </div>
+    <!-- 显示书籍等信息 -->
+    <div class="show_book">
+        <div class="book_addr">
+            	首页 > 全部商品 > 图书列表
+        </div>
+        <div class="book_border">
+            <div class="book_list">
+                <h4>商品目录</h4>
+                <div class="border"></div>
+                <div class="book_total">
+                    <h4>全部商品</h4>
+                    <span>共18种商品</span>
+                </div>
+                <div class="border"></div>
+                <img src="images/productlist.gif"  class="img" alt="">
+                <!-- 显示书 -->
+                <div class="all_book">
+                    <div class="book_1">
+                        <img src="productImg/1/2/4258e40b-797f-4576-95d7-f4c19a279202.png" alt="" >
+                        <a href="">Java Web程序开发入门</a><br> 售价:
+                        <span>100</span>￥
+                    </div>
+                    <div class="book_1">
+                        <img src="productImg/1/2/4258e40b-797f-4576-95d7-f4c19a279202.png" alt="" >
+                        <a href="">Java Web程序开发入门</a><br> 售价:
+                        <span>100</span>￥
+                    </div>
+                    <div class="book_1">
+                        <img src="productImg/1/2/4258e40b-797f-4576-95d7-f4c19a279202.png" alt="" >
+                        <a href="">Java Web程序开发入门</a><br> 售价:
+                        <span>100</span>￥
+                    </div>
+                    <div class="book_1">
+                        <img src="productImg/1/2/4258e40b-797f-4576-95d7-f4c19a279202.png" alt="" >
+                        <a href="">Java Web程序开发入门</a><br> 售价:
+                        <span>100</span>￥
+                    </div>
+                </div>
+                <!-- 翻页 -->
+                <div class="fanye">
+                    <img src="images/previous_page2.png" alt="" id="pgup">
+                    <div class="ls">
+                        <span class="list_color">1</span>
+                        <span class="list_color">2</span>
+                        <span class="list_color">3</span>
+                        <span class="list_color">4</span>
+                    </div>
+                    <img src="images/next_page.png" alt="" id="pgdn">
+                </div>
+                <br class="clear" />
+                <!-- 清除浮动 -->
+            </div>
+        </div>
+    </div>
+    
+</body>
+ <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+    var page={pageNo:1}; 
+    var total_page;	// 总页数
+    	$(function(){
+    		// 动态加载文件
+    		// 加载页面显示文件
+    		$.getScript('js/home_list/ajax_list.js',function(){
+    			console.log("加载成功");
+    		});
+    		// 调用up_down_page.js判断是否是在第一页和最后一页,改变图片
+    		$.getScript('js/home_list/up_down_page.js',function(){
+    			console.log("up/down成功");
+    		});
+    		
+    	});
+    </script>
+</html>
