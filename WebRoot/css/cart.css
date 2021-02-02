@@ -1,0 +1,78 @@
+/**
+    公共css
+    head部分
+*/
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.head {
+    width: 100%;
+    /* border: 1px solid black; */
+    position: relative;
+    background: white;
+}
+
+.head>img {
+    width: 180px;
+}
+
+.head>ul>li {
+    float: right;
+    list-style-type: none;
+    padding: 0 5px;
+}
+
+.head>ul {
+    position: absolute;
+    right: 0px;
+    top: 30px;
+}
+
+.head>ul>li:hover {
+    cursor: pointer;
+    color: #B4D76D;
+}
+
+
+/* 独立css */
+
+body {
+    background: #eee;
+}
+
+.shoppingCart {
+    width: 900px;
+    height: 500px;
+    margin: auto;
+    margin-top: 5%;
+    background: #FCFDEF;
+    padding-top: 30px;
+}
+
+.center_cart {
+    width: 800px;
+    margin: auto;
+}
+
+
+/* tr td {
+    border: px solid red;
+} */
+
+.hang {
+    width: 172px;
+    border: 1px solid black;
+}
+
+.quxiao:hover {
+    color: red;
+    cursor: pointer;
+}
