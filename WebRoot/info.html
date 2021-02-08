@@ -45,5 +45,19 @@
         </div>
     </div>
 </body>
-
+<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+<script type="text/javascript">
+	$(function(){
+		// 动态加载文件
+		//加载on_Click获取id
+    	//$.getScript('',function(){
+    		//console.log("加载成功");
+    	//});
+    	// 加载页面显示文件
+    	$.getScript('js/info/info_show.js',function(){
+    		console.log("加载成功");
+    	});
+    	
+	})
+</script>
 </html>

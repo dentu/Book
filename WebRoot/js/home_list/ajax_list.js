@@ -9,6 +9,7 @@ $.get('list',page,function(data){
     	$(".ls span").remove();		//删除默认的页数
     	// 遍历把数据加入到页面
     	for(var i = 0; i < data_item.length; i++){
+    		clone_div.find(".book_id").html(data_item[i].id);
     		clone_div.find("a").html(data_item[i].name+i);  //名字
     		clone_div.find("img").attr('src',data_item[i].imgurl); //图片路径
     		clone_div.find("span").html(data_item[i].price);	//单价

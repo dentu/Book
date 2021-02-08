@@ -145,6 +145,10 @@ a {
     padding-top: 5px;
 }
 
+.all_book>.book_1>.book_id {
+	display: none;
+}
+
 .fanye {
     margin-top: 13%;
     text-align: center;
@@ -182,3 +186,5 @@ a {
 	background: blue;
     color: white;
 }
+
+

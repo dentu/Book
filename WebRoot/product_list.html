@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/porduct_list.css">
-    
 </head>
 
 <body>
@@ -51,6 +50,7 @@
                         <img src="productImg/1/2/4258e40b-797f-4576-95d7-f4c19a279202.png" alt="" >
                         <a href="">Java Web程序开发入门</a><br> 售价:
                         <span>100</span>￥
+                        <div class="book_id"></div>
                     </div>
                     <div class="book_1">
                         <img src="productImg/1/2/4258e40b-797f-4576-95d7-f4c19a279202.png" alt="" >
@@ -100,7 +100,10 @@
     		$.getScript('js/home_list/up_down_page.js',function(){
     			console.log("up/down成功");
     		});
-    		
+    		// 点击跳转页面
+    		$.getScript('js/home_list/on_Click.js',function(){
+    			console.log("跳转加载成功");
+    		})
     	});
     </script>
 </html>
