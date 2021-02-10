@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>login.html</title>
+	<meta charset="utf-8">
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+
+  </head>
+  
+  <body>
+    <div class="center">
+    	<div class="left">
+    		<div align="center">
+    			<img src="images/logintitle.gif" width="150" height="30"/>
+    		</div>
+    		<!-- 显示提示 -->
+    		<div class="prompt">
+
+    		</div>
+    		<!-- 显示输入框 -->
+    		<div class="input">
+    			<div class="account_number" style="color:red">
+    				账号: 
+    				<span>
+    					<input type="text" placeholder="请输入账号" style="width:200px;height:30px;">
+    				</span>
+    			</div>
+    			<div class="password" style="color:red">
+    				密码	:
+    				<span>
+    					<input type="password" placeholder="请输入密码" style="width:200px;height:30px;">
+    				</span>
+    			</div>
+    		</div>
+    		<!-- 显示提交按钮 -->
+    		<div align="center" style="margin-top:54px;	margin-bottom: 70px;" class="button">
+    			<a href="#">
+    				<img src="images/loginbutton.gif">
+    			</a>
+    		</div>
+    		
+    	</div>
+    	<div class="right">
+    		<div class="font_size">
+    			<h4>您 还 没 有 注 册 ？</h4><br>
+    			<p>注册新用户，享受更优惠价格!</p><br>
+				<p>千种图书，供你挑选！注册即享受丰富折扣和优惠，便宜有好货！超过万本图书任您选。</p><br>
+				<p>超人气社区！精彩活动每一天。买卖更安心！支付宝交易超安全。</p>
+				<div align="center" style="margin:10px 0;">
+					<a href="#">
+						<img src="images/signupbutton.gif" width="135" height="33" />
+					</a>
+				</div>
+    		</div>
+    	</div>
+    </div>
+  </body>
+ <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+ <script type="text/javascript">
+ $(function(){
+	 $.getScript('js/login/login_button.js',function(){
+		console.log("加载成功") ;
+	 });
+ });
+ </script>
+</html>

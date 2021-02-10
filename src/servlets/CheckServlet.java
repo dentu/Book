@@ -18,28 +18,28 @@ public class CheckServlet extends HttpServlet {
 
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
-		//servlet输出图片
-		resp.setContentType("image/jpeg");//输出格式为图片格式
-		//resp.setContentType("text/html;charset=utf-8");//输出格式为HTML文本
-		ServletOutputStream sos = resp.getOutputStream();//这个才能输出二进制数据
-//		PrintWriter out=resp.getWriter();//不能使用，因为它只能输出文本
+		// servlet输出图片
+		resp.setContentType("image/jpeg");// 输出格式为图片格式
+		// resp.setContentType("text/html;charset=utf-8");//输出格式为HTML文本
+		ServletOutputStream sos = resp.getOutputStream();// 这个才能输出二进制数据
+		// PrintWriter out=resp.getWriter();//不能使用，因为它只能输出文本
 		// 设置浏览器不要缓存此图片
 		resp.setHeader("Pragma", "No-cache");
 		resp.setHeader("Cache-Control", "no-cache");
 		resp.setDateHeader("Expires", 0);
 		// 创建内存图象并获得其图形上下文
-		BufferedImage image = new BufferedImage(WIDTH, HEIGHT,BufferedImage.TYPE_INT_RGB);
+		BufferedImage image = new BufferedImage(WIDTH, HEIGHT,
+				BufferedImage.TYPE_INT_RGB);
 		Graphics g = image.getGraphics();
 		// 产生随机的认证码
 		char[] rands = generateCheckCode();
 
-		String checkcode=new String(rands);
-		//找到公共单元session
-		HttpSession session=req.getSession();
-		//存放共享数据
+		String checkcode = new String(rands);
+		// 找到公共单元session
+		HttpSession session = req.getSession();
+		// 存放共享数据
 		session.setAttribute("checkcode", checkcode);
 
-		
 		// 产生图像
 		drawBackground(g);
 		drawRands(g, rands);
@@ -48,10 +48,10 @@ public class CheckServlet extends HttpServlet {
 		// 将图像输出到客户端
 		ByteArrayOutputStream bos = new ByteArrayOutputStream();
 		ImageIO.write(image, "JPEG", bos);
-		byte[] buf = bos.toByteArray();//将图片转换为二进制的数组
-		resp.setContentLength(buf.length);//设置传送数据的长度
+		byte[] buf = bos.toByteArray();// 将图片转换为二进制的数组
+		resp.setContentLength(buf.length);// 设置传送数据的长度
 		// 下面的语句也可写成：bos.writeTo(sos);
-		sos.write(buf);//输出到浏览器
+		sos.write(buf);// 输出到浏览器
 		bos.close();
 		sos.close();
 

@@ -18,13 +18,13 @@ public class CartServlet extends HttpServlet {
 
 	public void service(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
-		User loginuser=(User)req.getSession().getAttribute("loginuser");
-		CartDAO dao=new CartDAO();
+		User loginuser = (User) req.getSession().getAttribute("loginuser");
+		CartDAO dao = new CartDAO();
 		try {
-			List<Cart> list=dao.findByUser(loginuser.getId());
-			double money=0;
-			for (Cart cart : list) {//循环得到使用价格
-				money+=cart.getSubtotal();//价格相加得到总价格
+			List<Cart> list = dao.findByUser(loginuser.getId());
+			double money = 0;
+			for (Cart cart : list) {// 循环得到使用价格
+				money += cart.getSubtotal();// 价格相加得到总价格
 			}
 			req.setAttribute("carts", list);
 			req.setAttribute("total", money);

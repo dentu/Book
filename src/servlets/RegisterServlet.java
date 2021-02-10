@@ -14,6 +14,7 @@ import org.apache.commons.beanutils.BeanUtils;
 
 import dao.UserDAO;
 import po.User;
+
 //注册
 @WebServlet("/reg")
 public class RegisterServlet extends HttpServlet {
@@ -21,16 +22,16 @@ public class RegisterServlet extends HttpServlet {
 	public void service(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		req.setCharacterEncoding("UTF-8");
-		User user=new User();
+		User user = new User();
 		try {
-			BeanUtils.populate(user, req.getParameterMap());//自动封装上传数据
+			BeanUtils.populate(user, req.getParameterMap());// 自动封装上传数据
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		//验证码比对
-		String checkcode=(String)req.getSession().getAttribute("checkcode");
-		String yzm=req.getParameter("yzm");
-		if(!checkcode.equals(yzm)){
+		// 验证码比对
+		String checkcode = (String) req.getSession().getAttribute("checkcode");
+		String yzm = req.getParameter("yzm");
+		if (!checkcode.equals(yzm)) {
 			req.setAttribute("yzmmsg", "验证码错误!");
 			req.setAttribute("user", user);
 			req.getRequestDispatcher("/register.jsp").forward(req, resp);
@@ -38,7 +39,7 @@ public class RegisterServlet extends HttpServlet {
 		}
 		try {
 			user.setRegistTime(new Date());
-			UserDAO dao=new UserDAO();
+			UserDAO dao = new UserDAO();
 			dao.save(user);
 			req.getRequestDispatcher("/registerSuccess.jsp").forward(req, resp);
 		} catch (Exception e) {

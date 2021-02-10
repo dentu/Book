@@ -10,22 +10,23 @@ import javax.servlet.http.HttpServletResponse;
 
 import po.Order;
 import dao.OrderDAO;
+
 @WebServlet("/confirm")
-public class ConfirmServlet extends HttpServlet{
+public class ConfirmServlet extends HttpServlet {
 
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
-			String id=req.getParameter("id");
-			OrderDAO od=new OrderDAO();
-			try {
-				Order o=od.findByid(id);
-				req.setAttribute("o", o);
-				req.getRequestDispatcher("confirm.jsp").forward(req, resp);
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+		String id = req.getParameter("id");
+		OrderDAO od = new OrderDAO();
+		try {
+			Order o = od.findByid(id);
+			req.setAttribute("o", o);
+			req.getRequestDispatcher("confirm.jsp").forward(req, resp);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
-	
+
 }

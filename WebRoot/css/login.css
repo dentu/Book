@@ -1,0 +1,60 @@
+/**
+¹«¹²css
+*/
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+/**
+Ë½ÓÐcss
+*/
+body{
+	background:rgba(0,0,0,0.5);
+}
+.center {
+	width:700px;
+	margin:auto;
+	margin-top:10%;
+	display: flex;
+}
+.left {
+	width:400px;
+	background:#EEE;
+	padding-top:20px;
+}
+.right {
+	width:300px;
+	background:#FCFDEF;
+}
+.prompt {
+	margin-top:15px;
+	color:red;
+	text-align:center;
+	font-size:18px;
+	height:22px;
+}
+.input {
+	width:100%;
+}
+.account_number {
+	margin:24px 0;
+	text-align:center;
+}
+.password {
+	margin-top:43px;
+	text-align:center;
+}
+
+.font_size {
+	width:230px;
+	margin:auto;
+	margin-top:40px;
+}
+

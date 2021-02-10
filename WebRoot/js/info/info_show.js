@@ -17,4 +17,5 @@ $.get('info',function(info_data){
 		//说明
 		$(".description span").html(info_data.description);
 	}
+	
 });
