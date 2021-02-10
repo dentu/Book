@@ -6,7 +6,13 @@
 var id ;
 $(".all_book div").on("click",function(){
 	// 获取点击元素的id
-	id=$(this).find(".book_id").text();
+	id = $(this).find(".book_id").text();
+	var ids = {bookId:id};
 	//跳转页面
-	location.href='info.html'
-})
+	$.get('global',ids,function(){
+		
+	});
+
+	location.href='info.html';
+});
+
